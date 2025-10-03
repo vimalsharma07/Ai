@@ -1,0 +1,12 @@
+controller/UserController$LoginRequest.class
+repository/UserRepository.class
+service/AIService.class
+controller/UserController$RegisterUserRequest.class
+app/Application.class
+controller/UserController$LoginResponse.class
+controller/UserController.class
+service/JwtService.class
+model/User.class
+service/UserService.class
+controller/HelloController.class
+controller/UserController$RegisterResponse.class
