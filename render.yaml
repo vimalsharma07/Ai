@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: springboot-demo
+    env: docker
+    plan: free
+    healthCheckPath: /hello
+    autoDeploy: true
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: none
+      - key: SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT
+        value: org.hibernate.dialect.MySQLDialect
+      - key: SPRING_FLYWAY_ENABLED
+        value: true
+      - key: SPRING_FLYWAY_LOCATIONS
+        value: classpath:db/migration
+      - key: JAVA_TOOL_OPTIONS
+        value: -XX:+UseContainerSupport -XX:MaxRAMPercentage=75
+      - key: TZ
+        value: UTC
+
